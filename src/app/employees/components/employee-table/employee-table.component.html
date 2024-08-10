@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8" style="margin: 0px auto;">
+            <table class="employee-table">
+                <thead>
+                  <tr>
+                    <th class="left-align">Name</th>
+                    <th class="center-align">Total Time in Month</th>
+                    <th class="center-align">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let employee of employees" [ngClass]="{'highlight': employee.TotalTimeWorked < 100}">
+                    <td class="left-align">{{ employee.Name?  employee.Name: 'Unknown' }}</td>
+                    <td class="center-align">{{ employee.TotalTimeWorked}} hrs</td>
+                    <td class="center-align"><a href="#">Edit</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+        </div>
+    </div>
+</div>
