@@ -16,7 +16,6 @@ export class EmployeeTableComponent implements OnInit {
     this.employeeService.getEmployeeTimeEntries().subscribe({
       next: (data) => {
         this.employees = data.sort((a,b)=>b.TotalTimeWorked-a.TotalTimeWorked);
-        console.log(this.employees);
       },
       error: (err) => {
         console.log(err);

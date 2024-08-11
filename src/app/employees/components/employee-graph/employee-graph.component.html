@@ -1,1 +1,10 @@
-<p>employee-graph works!</p>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-8 wrapper">
+            <h1 class="mb-5 mt-5 text-center">Pie-chart graph of employees work hours in February 2022</h1>
+            <apx-chart *ngIf="chartOptions" [series]="chartOptions.series" [chart]="chartOptions.chart" [labels]="chartOptions.labels" [legend]="chartOptions.legend">
+</apx-chart>
+            <app-spinner></app-spinner>
+        </div>
+    </div>
+</div>
